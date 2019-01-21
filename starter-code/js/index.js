@@ -1,5 +1,47 @@
-function deleteItem(e){
+let list = document.getElementById('list')
 
+//numeros
+let qty = document.getElementsByClassName("quantity")
+let price = document.getElementsByName("createNewItemRow")
+let addPrice = document.getElementsByName("createNewItemRow")
+
+//botones
+let buttonDel = document.getElementsByClassName("btn-delete")
+let addItem = document.getElementsByName("createItemNode")
+
+//Agregar producto
+function addTodo() {
+  let newTodo = document.createElement('li')
+  newTodo.innerText = todo[0].value
+  list.appendChild(newTodo)
+  todo[0].value = ''
+}
+
+let toal=qty+addPrice
+
+//print
+console.log(qty)
+console.log(addPrice)
+console.log(total)
+
+list.addEventListener('click', e => {
+  list.removeChild(e.target)
+})
+
+buttonDel.onclick = buttonDel
+addItem.onclick = addItem
+
+
+
+
+
+
+
+/*
+function deleteItem(e){
+  var id=elemento.parentNode.getAttribute("id");
+    node=document.getElementById(id);
+    node.parentNode.removeChild(node);
 }
 
 function getPriceByProduct(itemNode){
@@ -19,7 +61,9 @@ function createQuantityInput(){
 }
 
 function createDeleteButton(){
-
+  list.addEventListener('click', e => {
+    list.removeChild(e.target)
+  })
 }
 
 function createQuantityNode(){
@@ -27,15 +71,17 @@ function createQuantityNode(){
 }
 
 function createItemNode(dataType, itemData){
-
 }
 
 function createNewItemRow(itemName, itemUnitPrice){
-
+   
 }
 
 function createNewItem(){
-
+  let newTodo = document.createElement('li')
+  newTodo.innerText = todo[0].value
+  list.appendChild(newTodo)
+  todo[0].value = ''
 }
 
 window.onload = function(){
@@ -50,3 +96,5 @@ window.onload = function(){
     deleteButtons[i].onclick = deleteItem;
   }
 };
+
+*/
