@@ -39,3 +39,17 @@ input {
 .quantity {
   margin: 0 5px;
 }
+
+h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+}
+
+li{
+  list-style: none;
+  display: inline;
+  justify-content: space-around;
+}
